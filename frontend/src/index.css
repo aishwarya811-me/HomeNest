@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Outfit', sans-serif;
+        background: #fdf8f3;
+        color: #1a1a2e;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Cormorant Garamond', serif;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 active:scale-95;
+    }
+
+    .btn-primary {
+        @apply btn bg-primary-600 hover:bg-primary-700 text-white shadow-sm hover:shadow;
+    }
+
+    .btn-outline {
+        @apply btn border border-primary-300 text-primary-700 hover:bg-primary-50;
+    }
+
+    .btn-ghost {
+        @apply btn text-gray-600 hover:bg-gray-100;
+    }
+
+    .input {
+        @apply w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent placeholder-gray-400 transition-all;
+    }
+
+    .card {
+        @apply bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden;
+    }
+
+    .section {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 py-12;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e4a070;
+    border-radius: 3px;
+}
